@@ -18,16 +18,18 @@ export default function Work({ type }) {
       <div className="outlines">
         {
           type === "work" || type === "education"
-            ? db[type].data.map(item => (
+            ? db[type].data.map((item, index) => (
               <Outline
+                key={index}
                 head={item.head}
                 place={item.place}
                 shortDetail={item.shortDetail}
                 details={item.details}
               />
             ))
-            : db.projects.data.map(item => (
+            : db.projects.data.map((item, index) => (
               <Project
+                key={index}
                 head={item.head}
                 github={item.github}
                 live={item.live}

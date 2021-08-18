@@ -6,10 +6,10 @@ class Contact extends Component {
     super(props);
     this.state = {
       name: '',
-      phoneNumber: '',
       email: '',
       message: ''
     };
+    this.phoneRef = React.createRef();
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -27,13 +27,13 @@ class Contact extends Component {
     let { setStatus } = this.props;
     setStatus('sending');
 
-    return fetch('/api/message/deliver', {
+    return fetch('http://localhost:8080/api/message/deliver', {
       method: 'POST',
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ name, email, message, phoneNumber })
+      body: JSON.stringify({ name, email, message, phoneNumber: Boolean(phoneNumber) ? phoneNumber : undefined })
     })
       .then(data => data.json())
       .then(res => {
@@ -44,7 +44,6 @@ class Contact extends Component {
           setStatus('success');
           return this.setState({
             name: '',
-            phoneNumber: '',
             email: '',
             message: ''
           });
@@ -60,9 +59,9 @@ class Contact extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const { name, email, message, phoneNumber } = this.state;
+    const { name, email, message } = this.state;
     if (name.trim() !== '' && email.trim() !== '' && message.trim() !== '') {
-      this.sendMessage(name, email, message, phoneNumber)
+      this.sendMessage(name, email, message, this.phoneRef.current.value)
     } else
       return;
   }
@@ -84,7 +83,7 @@ class Contact extends Component {
             <div className="short-input-child">
               <label htmlFor="phoneNumber">Phone Number</label>
               <div className="is-relative">
-                <input type="number" id="phoneNumber" value={this.state.phoneNumber} name="phoneNumber" onChange={this.handleChange} required />
+                <input type="number" id="phoneNumber" name="phoneNumber" ref={this.phoneRef} onChange={this.handleChange} required />
                 <span className="focus-border"></span>
               </div>
             </div>

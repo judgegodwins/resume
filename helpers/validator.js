@@ -1,6 +1,7 @@
 
 module.exports = (schema, source = 'body') => ( req, res, next ) => {
   // console.log('source: ', source);
+  console.log(req.body);
   const { error } = schema.validate(req[source]);
 
   if (!error) return next();
