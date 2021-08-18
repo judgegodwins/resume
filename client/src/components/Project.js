@@ -1,16 +1,23 @@
 import React from 'react';
 
 
-export default function Project(props) {
+export default function Project({ head, github, live, details }) {
   return (
     <div className="outline">
-      <a href="#">
-        <h4>Project</h4>
-      </a>
+      <div className="flex-head-div">
+        <h4 className="head project-head">{head}</h4>
+        <div style={{ marginLeft: 10 }}>
+          <a target="_blank" rel="noopener noreferrer" href={github}>
+            <span className="fade">Code</span>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" style={{ marginLeft: 10 }} href={live}>
+            <span className="fade">Live</span>
+          </a>
+        </div>
+      </div>
+
       <p className="details">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        {details}
       </p>
     </div>
   )

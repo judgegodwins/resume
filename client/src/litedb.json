@@ -1,0 +1,53 @@
+{
+  "work": {
+    "title": "Work Experience",
+    "data": [
+      {
+        "head": "Intern Backend Developer",
+        "place": "HNGi",
+        "shortDetail": "June 2020 - August 2020, Remote",
+        "details": "Worked on various backend projects and collaborated with teams"
+      },
+      {
+        "head": "Intern Developer",
+        "place": "Spurbuddy",
+        "shortDetail": "July 2020 - August 2020, Remote",
+        "details": "Worked on Spurbuddy's site and other products."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Personal Projects",
+    "data": [
+      {
+        "head": "Coll",
+        "github": "https://github.com/judgegodwins/coll",
+        "live": "https://coll.netlify.app",
+        "details": "A video call app I built to learn WebRTC"
+      },
+      {
+        "head": "Converge",
+        "github": "https://github.com/converge-team/converge-apis",
+        "live": "https://convrge.netlify.app/",
+        "details": "A private chat app I built for fun"
+      },
+      {
+        "head": "CurriculumApp",
+        "github": "https://github.com/judgegodwins/curriculumapi",
+        "live": "https://ricapp.netlify.app/",
+        "details": "An app I built for a school to aid learning during the COVID19 pandemic"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "data": [
+      {
+        "head": "Bachelor's degree, Computer Science",
+        "place": "University of Port Harcourt",
+        "shortDetail": "2018 - 2022, Port Harcourt",
+        "details": "Completing 8 semesters toward a Bachelor's degree"
+      }
+    ]
+  }
+}

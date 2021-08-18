@@ -2,28 +2,38 @@ import React from 'react';
 import Outline from './Outline';
 import Project from './Project';
 
+import db from "../litedb.json";
+
 
 export default function Work({ type }) {
   return (
     <div className="tab-common work" id={type}>
       <div>
-          {
-            type === "work"
-              ? <h2>Work <br />Experience</h2>
-              : <h2>Personal <br />Projects</h2>
-          }
+        <h2 style={{marginTop: 0}}>
+          {db[type].title.split(' ')[0]}
+          <br />
+          {db[type].title.split(' ')[1]}
+        </h2>
       </div>
       <div className="outlines">
         {
-          type === "work"
-            ? <React.Fragment>
-              <Outline />
-              <Outline />
-            </React.Fragment>
-            : <React.Fragment>
-              <Project />
-              <Project />
-            </React.Fragment>
+          type === "work" || type === "education"
+            ? db[type].data.map(item => (
+              <Outline
+                head={item.head}
+                place={item.place}
+                shortDetail={item.shortDetail}
+                details={item.details}
+              />
+            ))
+            : db.projects.data.map(item => (
+              <Project
+                head={item.head}
+                github={item.github}
+                live={item.live}
+                details={item.details}
+              />
+            ))
         }
       </div>
     </div>

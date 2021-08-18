@@ -1,8 +1,35 @@
 
 .outline {
+
+  .head {
+    margin: 0 0 10px 0;
+
+    &.project-head {
+      margin: 0;
+    }
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
   .fade {
     color: rgba(0, 0, 0, 0.7);
     font-size: 12px;
     margin: 2px 0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .flex-head-div {
+    @include flex(flex-start);
+  }
+
+  @media only screen and (max-width: 768px) {
+    .head {
+      margin: 10px 0;
+    }
   }
 }

@@ -4,6 +4,10 @@
   @include flex();
   flex-direction: column;
 
+  a {
+    text-decoration: none;
+  }
+
   ul.links {
       @include flex();
       list-style: none;

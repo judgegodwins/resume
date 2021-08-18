@@ -22,6 +22,7 @@ function App(props) {
       <HomeTab />
       <Work type="work"/>
       <Work type="projects" />
+      <Work type="education" />
       <Contact status={status} setStatus={setStatus}/>
     </div>
   );

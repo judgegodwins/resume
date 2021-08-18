@@ -4,7 +4,7 @@ const { dbConfig } = require('../config');
 
 const dbURI = process.env.NODE_ENV == "development"
   ? `mongodb://${dbConfig.user}:${encodeURIComponent(dbConfig.password)}@${dbConfig.host}:${dbConfig.port}/${dbConfig.name}`
-  : process.env.DB_URI
+  : process.env.DB_URI  
 
 const options = {
   useNewUrlParser: true,
