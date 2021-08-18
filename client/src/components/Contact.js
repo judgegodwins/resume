@@ -83,7 +83,7 @@ class Contact extends Component {
             <div className="short-input-child">
               <label htmlFor="phoneNumber">Phone Number</label>
               <div className="is-relative">
-                <input type="number" id="phoneNumber" name="phoneNumber" ref={this.phoneRef} onChange={this.handleChange} required />
+                <input type="tel" id="phoneNumber" name="phoneNumber" ref={this.phoneRef} onChange={this.handleChange} required />
                 <span className="focus-border"></span>
               </div>
             </div>
