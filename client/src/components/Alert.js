@@ -25,7 +25,6 @@ function Alert({ status, name }) {
           success
             ? 'Your message has been delivered'
             : "Oops, something went wrong. Try checking your connection"
-
         }
       </p>
     </div>

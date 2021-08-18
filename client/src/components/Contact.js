@@ -27,7 +27,7 @@ class Contact extends Component {
     let { setStatus } = this.props;
     setStatus('sending');
 
-    return fetch('http://localhost:8080/message/deliver', {
+    return fetch('/api/message/deliver', {
       method: 'POST',
       mode: 'cors',
       headers: {
