@@ -1,0 +1,16 @@
+
+.work {
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .outlines {
+    // padding-left: 20%;
+    width: 70%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .outlines {
+      width: unset
+    }
+  }
+}

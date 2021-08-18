@@ -1,0 +1,473 @@
+* {
+    box-sizing: border-box
+}
+
+html,
+body,
+#root {
+    height: 100%
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Sora", sans-serif;
+    background: rgba(0, 0, 0, 0.03)
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer
+}
+
+button {
+    padding: 15px 35px;
+    font-family: "Sora", sans-serif;
+    font-size: 10px;
+    background: #ffe6e6;
+    color: #f00;
+    border: none;
+    font-weight: 500;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+button:active {
+    background: #f99
+}
+
+button>i {
+    margin-left: 10px
+}
+
+.touch-indicator {
+    border-radius: 50%
+}
+
+.touch-indicator:active {
+    background: rgba(0, 0, 0, 0.08)
+}
+
+.link {
+    padding: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: 500
+}
+
+.link:nth-child(2) {
+    margin: 0 20px
+}
+
+.link:hover,
+.link:active {
+    background: rgba(0, 0, 0, 0.08)
+}
+
+.liner {
+    width: 30px;
+    height: 3px;
+    background: white
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.socials .social {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.socials .social i {
+    color: rgba(0, 0, 0, 0.7)
+}
+
+.alert {
+    width: 100%;
+    height: 50px;
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms ease-in-out;
+    box-shadow: 13px 32px 36px -14px rgba(179, 179, 179, 0.3);
+    margin-bottom: 15px;
+    color: white !important;
+    padding: 10px
+}
+
+.alert>p {
+    margin: 0
+}
+
+@media only screen and (min-width: 1024px) {
+    .touch-indicator:active {
+        background: transparent
+    }
+}
+
+.top-bar {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.top-bar ul.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0
+}
+
+.home-screen {
+    height: 100%
+}
+
+.home-tab {
+    width: 100%;
+    padding: 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}
+
+.home-tab>div {
+    width: 50%;
+    margin-bottom: 10%
+}
+
+.home-tab .about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column
+}
+
+.home-tab .about>h1 {
+    font-size: 50px
+}
+
+.home-tab .about>p {
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 300
+}
+
+.home-tab .about .explore-link {
+    margin-top: 60px
+}
+
+.home-tab .picture {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end
+}
+
+.home-tab .picture>img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%
+}
+
+@media only screen and (max-width: 768px) {
+    .home-tab {
+        flex-direction: column-reverse;
+        padding: 0 20px
+    }
+    .home-tab>div {
+        width: 100%
+    }
+    .home-tab .about {
+        align-items: center
+    }
+    .home-tab .about>h1 {
+        font-size: 20px
+    }
+    .home-tab .about>p {
+        font-size: 14px;
+        text-align: center
+    }
+    .home-tab .about .socials.home .social {
+        justify-content: center
+    }
+    .home-tab .picture {
+        justify-content: center
+    }
+    .home-tab .picture>img {
+        width: 120px;
+        height: 120px
+    }
+}
+
+.contact-div {
+    width: 100%;
+    padding: 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}
+
+.contact-div form.leave-message {
+    margin-bottom: 10%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 200px
+}
+
+.contact-div form.leave-message .short-input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%
+}
+
+.contact-div form.leave-message .short-input .short-input-child:not(:first-child) {
+    margin-left: 50px
+}
+
+.contact-div form.leave-message .short-input-child {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0
+}
+
+.contact-div form.leave-message .short-input-child .is-relative {
+    position: relative;
+    width: 100%
+}
+
+.contact-div form.leave-message .short-input-child .is-relative textarea {
+    height: 100px !important;
+    font-family: "Sora", sans-serif;
+    font-size: 15px !important;
+    padding-top: 10px
+}
+
+.contact-div form.leave-message .short-input-child .is-relative>input,
+.contact-div form.leave-message .short-input-child .is-relative>textarea {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    margin-top: 7px;
+    font-size: 16px
+}
+
+.contact-div form.leave-message .short-input-child .is-relative>input~.focus-border,
+.contact-div form.leave-message .short-input-child .is-relative>textarea~.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000
+}
+
+.contact-div form.leave-message .short-input-child .is-relative>input:focus~.focus-border,
+.contact-div form.leave-message .short-input-child .is-relative>textarea:focus~.focus-border {
+    width: 100%;
+    transition: 0.5s
+}
+
+.contact-div form.leave-message .short-input-child.outside {
+    width: 100%
+}
+
+.contact-div form.leave-message .short-input-child.outside .is-relative {
+    width: 100%
+}
+
+.cover {
+    position: relative;
+    width: 60%;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: scaleX(0.5)
+}
+
+.cover .tuner {
+    width: 20px;
+    height: 50%;
+    background: black;
+    animation: load 2s infinite;
+    background-color: red
+}
+
+.cover .tuner:nth-child(2) {
+    margin: 0 8px;
+    animation-delay: 0.1s
+}
+
+.cover .tuner:last-child {
+    animation-delay: 0.2s
+}
+
+@keyframes load {
+    0% {
+        height: 100%
+    }
+    50%,
+    100% {
+        height: 50%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-div {
+        padding: 0 20px;
+        height: unset
+    }
+    .contact-div form.leave-message {
+        padding: 0
+    }
+    .contact-div form.leave-message .short-input {
+        flex-direction: column
+    }
+    .contact-div form.leave-message .short-input .short-input-child {
+        margin: 0 !important;
+        width: 100%
+    }
+}
+
+.portfolio-cover {
+    width: 100%;
+    padding: 0 200px 20px
+}
+
+.portfolio-cover .topmost {
+    padding-left: 40px
+}
+
+.portfolio-div {
+    width: 100%;
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-gap: 30px
+}
+
+.portfolio-div .project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 350px;
+    padding: 20px;
+    color: white;
+    box-shadow: 13px 32px 36px -14px rgba(179, 179, 179, 0.3)
+}
+
+.portfolio-div .project:first-child {
+    background: #f66
+}
+
+.portfolio-div .project:nth-child(2) {
+    background: #6a89cc
+}
+
+.portfolio-div .project:nth-child(3) {
+    background: #101820
+}
+
+.portfolio-div .project:nth-child(4) {
+    background: #4064da
+}
+
+.portfolio-div .project:last-child {
+    background: #079992
+}
+
+.portfolio-div .project .image {
+    width: 100%
+}
+
+.portfolio-div .project .image>img {
+    width: 45px
+}
+
+.portfolio-div .project .top {
+    width: 100%;
+    position: relative
+}
+
+.portfolio-div .project .top>h3 {
+    font-size: 16px;
+    color: white
+}
+
+@media only screen and (max-width: 768px) {
+    .portfolio-cover {
+        padding: 0 20px 30px
+    }
+    .portfolio-cover .topmost {
+        padding-left: 0
+    }
+    .portfolio-div {
+        padding: 0;
+        grid-template-columns: 100%
+    }
+    .portfolio-div .project {
+        height: 270px;
+        padding-top: 30px
+    }
+}
+
+.transition-group {
+    height: 90%;
+    position: relative
+}
+
+.transition-group .route-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0
+}
+
+.slide-enter {
+    bottom: -100%
+}
+
+.slide-enter.slide-enter-active {
+    bottom: 0;
+    transition: 200ms ease-in
+}
+
+.slide-exit {
+    bottom: 0
+}
+
+.slide-exit.slide-exit-active {
+    bottom: -100%;
+    transition: ease-in
+}
+
+.app {
+    height: 100%;
+    position: relative
+}

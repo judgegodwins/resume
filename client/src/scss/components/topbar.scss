@@ -1,0 +1,13 @@
+.top-bar {
+  width: 100%;
+  height: 10%;
+  @include flex();
+  flex-direction: column;
+
+  ul.links {
+      @include flex();
+      list-style: none;
+      padding: 0;
+  }
+
+}

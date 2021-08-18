@@ -1,0 +1,12 @@
+@import 'utilities';
+@import './components/topbar';
+@import './components/hometab';
+@import './components/contact';
+@import './components/outline.scss';
+@import './components/work.scss';
+// @import './components/portfolio';
+
+.app {
+    height: 100%;
+    position: relative;
+}
