@@ -72,7 +72,7 @@ class Contact extends Component {
         <form className="leave-message">
           <h2 style={{ marginBottom: "20px" }}>Leave Me a Message</h2>
           <div className="short-input-child outside">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Name*</label>
             <div className="is-relative">
               <input type="text" value={this.state.name} id="name" name="name" onChange={this.handleChange} required />
               <span className="focus-border"></span>
@@ -88,7 +88,7 @@ class Contact extends Component {
               </div>
             </div>
             <div className="short-input-child">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email*</label>
               <div className="is-relative">
                 <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} required />
                 <span className="focus-border"></span>
@@ -97,7 +97,7 @@ class Contact extends Component {
           </div>
           
           <div className="short-input-child outside">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">Message*</label>
             <div className="is-relative">
               <textarea id="message" name="message" value={this.state.message} onChange={this.handleChange} required />
               <span className="focus-border"></span>
