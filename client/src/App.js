@@ -20,10 +20,10 @@ function App(props) {
         status={status}
       />
       <HomeTab />
-      <Work type="work"/>
-      <Work type="projects" />
+      <Work type="work"  bottomLiner />
+      <Work type="projects" bottomLiner />
       <Work type="education" />
-      <Contact status={status} setStatus={setStatus}/>
+      <Contact style={{marginTop: 50}}status={status} setStatus={setStatus}/>
     </div>
   );
 }

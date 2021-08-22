@@ -36,6 +36,11 @@
         "github": "https://github.com/judgegodwins/curriculumapi",
         "live": "https://ricapp.netlify.app/",
         "details": "An app I built for a school to aid learning during the COVID19 pandemic"
+      },
+      {
+        "head": "CSV To JSON API",
+        "github": "https://github.com/judgegodwins/csv-to-json-api",
+        "details": "API that converts CSV to JSON"
       }
     ]
   },

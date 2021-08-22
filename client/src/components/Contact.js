@@ -68,7 +68,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="contact-div" id="contact">
+      <div style={this.props.style} className="contact-div" id="contact">
         <form className="leave-message">
           <h2 style={{ marginBottom: "20px" }}>Leave Me a Message</h2>
           <div className="short-input-child outside">
@@ -95,6 +95,7 @@ class Contact extends Component {
               </div>
             </div>
           </div>
+          
           <div className="short-input-child outside">
             <label htmlFor="message">Message</label>
             <div className="is-relative">

@@ -10,9 +10,12 @@ export default function Project({ head, github, live, details }) {
           <a target="_blank" rel="noopener noreferrer" href={github}>
             <span className="fade">Code</span>
           </a>
-          <a target="_blank" rel="noopener noreferrer" style={{ marginLeft: 10 }} href={live}>
-            <span className="fade">Live</span>
-          </a>
+          {
+            live &&
+            <a target="_blank" rel="noopener noreferrer" style={{ marginLeft: 10 }} href={live}>
+              <span className="fade">Live</span>
+            </a>
+          }
         </div>
       </div>
 
